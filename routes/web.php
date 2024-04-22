@@ -3,5 +3,9 @@
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('welcomef');
+    return view('welcome');
 });
+
+// Route::get('/errorcodes', function () {
+//     return view('home');
+// });
