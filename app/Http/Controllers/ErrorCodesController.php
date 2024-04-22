@@ -6,18 +6,16 @@ use Illuminate\Http\Request;
 
 class ErrorCodesController extends Controller
 {
-    public function page()
+    public function index()
     {
-        $errorCodeList = $this->errorJson();
+        $errorCodeList = $this->errorsJson();
 
-        $number = rand(0, 65);
+        $number = rand(0, 62);
         
         $errorCodeJson = $errorCodeList[$number];
     
         $code = $errorCodeJson['code'];
         $description = $errorCodeJson['description'];
-
-        echo json_encode([$_GET, $_POST]);
 
         return view('home', [
             'code' => $code,
@@ -25,7 +23,7 @@ class ErrorCodesController extends Controller
         ]); 
     }
 
-    public function errorJson() 
+    public function errorsJson() 
     {
         return ([
             ['code' => '100', 'description' => 'Continue'],

@@ -9,4 +9,4 @@ Route::get('/user', function (Request $request) {
 })->middleware('auth:sanctum');
 
 Route::get('/errorcodes', [ErrorCodesController::class, 'index']);
-Route::get('/errorcodes/game', [ErrorCodesController::class, 'page']);
+Route::get('/404', [ErrorCodesController::class, 'index']);
