@@ -12,11 +12,14 @@
       <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
       <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
       <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-gZY/gP6aNbDnLbC25zBwvYQ2LxRbIL1pLjfjFmCJbAn4VXz+w25/zFyEVyv9UEKZk4f+9NL6ce0xjXO7WdYjMw==" crossorigin="anonymous" />
+
    </head>
    <style>
       .background {
-      background-color: purple;
+      background-color: black;
       display: flex;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
       height: 100vh;
@@ -32,7 +35,6 @@
       flex-direction: column;
       width: 800px;
       height: 250px;
-      background-color: red;
       }
       .top {
       display: flex;
@@ -55,7 +57,7 @@
       justify-content: center;
       flex-direction: row;
       width: 100%;
-      gap: 60px;
+      gap: 130px;
       }
       .container-value-buttton{
       background-color: purple;
@@ -119,11 +121,41 @@
       align-items: center;
       gap: 10px;
       }
+
+      .logo-container {
+        display: flex;
+        position: relative;
+        bottom: 150px;
+        color: white;
+      }
+      
+      a{
+        text-decoration: none;
+        color: white;
+        font-size: larger;
+      }
+
+      .links-container {
+        background-color: red;
+        display: flex;
+        position: relative;
+        top: 100px;
+        color: white;
+      }
+      .point {
+        font-size: 1.4rem;
+      }
+      .score-container{
+        display: flex;
+        position: relative;
+        left: 32px;
+      }
    </style>
    <body class="background">
+        <div class="logo-container"><a href="http://127.0.0.1:8000/api/404">404</a></div>  
       <div class="main-container">
          <div class="top">
-            <h2 class="text-return">Read the descriptions and try write the correctly error codes</h2>
+            <h2 class="text-return">Read the descriptions and try to write the http error codes correctly</h2>
          </div>
          <div class="mid">
             <div data-aos-anchor-placement="center-bottom" >
@@ -150,19 +182,25 @@
             </div>
          </div>
          <div class="bot">
-            <div>
+            <div class="score-container">
                <h4 class="text-return">Your score: <span id="score">0</span>/6</h4>
             </div>
             <div class="scoreboard">
-               <h1 class="text-return point" id="pointOne" id="point">-</h1>
-               <h1 class="text-return point" id="pointTwo" id="point">-</h1>
-               <h1 class="text-return point" id="pointThree" id="point">-</h1>
-               <h1 class="text-return point" id="pointFour" id="point">-</h1>
-               <h1 class="text-return point" id="pointFive" id="point">-</h1>
-               <h1 class="text-return point" id="pointSix" id="point">-</h1>
+               <h1 class="text-return point" id="pointOne">-</h1>
+               <h1 class="text-return point" id="pointTwo">-</h1>
+               <h1 class="text-return point" id="pointThree">-</h1>
+               <h1 class="text-return point" id="pointFour">-</h1>
+               <h1 class="text-return point" id="pointFive">-</h1>
+               <h1 class="text-return point" id="pointSix">-</h1>
             </div>
          </div>
       </div>
+
+      <div class="links-container">
+        
+
+      </div>
+
       <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
       <script>AOS.init();</script>
       <script>
