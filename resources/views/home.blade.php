@@ -148,7 +148,7 @@
       .score-container{
         display: flex;
         position: relative;
-        left: 32px;
+        left: 30px;
       }
    </style>
    <body class="background">
